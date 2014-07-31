@@ -1,0 +1,8 @@
+function [fobj] = getObjective(A, S, X, beta)
+
+E = A*S - X;
+fobj= sum(sum(E.^2));
+
+E = beta*sum(sum(S.^2));
+
+
